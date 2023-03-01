@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.arrows-container {
+	display: flex;
+    justify-content: space-evenly;
+}
+
+.pay-container {
+    display: flex;
+	align-items: center;
+}
+
+button {
+	margin: $default-margin $default-margin $default-margin $default-margin;
+}
+
+.mat-primary {
+    background: darkslategrey;
+    color: white;
+}

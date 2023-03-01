@@ -1,0 +1,4 @@
+
+<div class="power-switch-container">
+	<mat-slide-toggle [checked]="power" (change)="powerService.setMachine(!power)" labelPosition="before" >Power {{power ? 'On' : 'Off'}}</mat-slide-toggle>
+</div>

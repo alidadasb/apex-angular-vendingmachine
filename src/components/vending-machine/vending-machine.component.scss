@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.vending-machine-container {
+    width: 50%;
+    margin: auto;
+    background: lightgray;
+    border: 2px solid black;
+    border-radius: $default-border-radius;
+    padding: 5px 5px 5px 5px;
+}
+
+.name-quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Roboto, "Helvetica Neue", sans-serifboto, serif;
+  font-size: large;
+  font-weight: bold;
+  text-transform: capitalize;
+}

@@ -1,0 +1,20 @@
+<div class="vending-machine-container">
+  <power-button></power-button>
+  <app-message-display [message]="getFirstDisplayMessage((power$|async)!)"></app-message-display>
+  <div class="name-container">
+    <img src="assets/vending-machine.png" alt="Vending Machine">
+
+    <div *ngIf="(power$|async)! && selectedItem" class=" name-quantity-container">
+
+      <div matBadge="{{selectedItem.quantity}}" matBadgeColor="primary" matBadgePosition="after" matBadgeOverlap="false"  >
+        <app-message-display [message]="selectedItem.name"></app-message-display>
+      </div>
+
+    </div>
+  </div>
+  <div id="selection-container" *ngIf="(power$|async)!">
+    <vending-item-display [inventory]="(vendingInventory$ | async)!"
+                          [(selectedItem)]="selectedItem"></vending-item-display>
+  </div>
+</div>
+
